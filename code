@@ -1,0 +1,15 @@
+int main(){
+  int i;
+PINSEL0=0X00; //Configure all pins as GPIO's
+IODIRO=0XFFFF;    //Configure data direction of pins as outputs
+while(1){
+for(i=0;i<16;i++){
+IOSET0=1<<i;   //Switch on led's one after the other
+delay(10000); //delay
+}
+for(i=15;i>=0;i--){
+IOCLR0=1<<i; //switch off LED's one after the other
+delay(10000); //delay
+}}
+return 0;
+}
